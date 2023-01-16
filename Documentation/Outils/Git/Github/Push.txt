@@ -1,0 +1,7 @@
+# Le push avec user/password ne fonctionne plus depuis 2021 #
+
+- Create Access token on Github
+Settings -> Developper Settings -> Personal access tokens -> Generate new token -> Generate Token -> on copie ce token
+- Change the remote URL
+git remote set-url origin https://<token>@github.com/<username>/<repositoryname>.git
+exemple : git remote set-url origin https://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@github.com/kewou/Documentation.git

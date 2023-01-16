@@ -1,0 +1,39 @@
+#Test pour voir si tout fonctionne bien
+docker run hello-world
+
+#Le docker hub contient toutes nos images téléchargées
+
+#docker run -- name (nom du container), -d (nom de l'image)
+
+#Liste des conteneurs qui tournent sur ma machine
+docker ps
+
+#Arreter un conteneur
+docker rm id_conteneur
+
+#start redids via docker
+docker run -d -p 6379:6379 --name myredis --network redisnet redis --restart=always
+
+#start client web redis via docker
+docker run -d -v redisinsight:/db -p 8001:8001 redislabs/redisinsight:latest
+
+#start portaino via docker
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
+#start mariadb
+docker run --name mariadb -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d docker.io/library/mariadb:10.3
+connection de l exterierur => mysql -h 172.17.0.4 (ip de l'adresse mariadb sur le container) -u root -p
+
+#apache et php
+https://www.youtube.com/watch?v=qGJe7v2IbOg
+
+#Dans le fichier docker-compose ( sert à lancer un ensemble de conteneurs ) les services sont des conteneurs ( web, db et myadmin : ces nom sont utilisés pour créer des liens (links) entre différents conteneurs.
+
+#Créer une image docker
+-Dockerfile => fichier qui contient les instructions de la création
+-Commande de lancement docker build -t (nom image) . (chemin du repertoire ou se trouve Dockerfile)
+Exemple => docker build -t mariadbAxioroute .
+
+docker run --name mariadb -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v /home/noumia/Documents/BeezyStart_Up/GestionLoyer/test:/docker-entrypoint-initdb.d -d docker.io/library/mariadb:10.3
+
+http://localhost:8081/repository/DockerNexus/
