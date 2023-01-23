@@ -1,3 +1,0 @@
-#Voir tous les informations de config
-git config --list
-

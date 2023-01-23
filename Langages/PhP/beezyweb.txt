@@ -1,0 +1,11 @@
+Compte User :
+# Prod                                                            # Local
+email => knoumia@groupeastek.fr
+pass => testtest
+
+
+# DOCKER
+/home/noumia/.docker/www => dans ce dossier, j'ai mes éléments qui font références sur la machine docker
+
+Lancer le container via vscode
+

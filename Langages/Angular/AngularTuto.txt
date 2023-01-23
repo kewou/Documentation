@@ -1,0 +1,22 @@
+1- Installer nodejs
+sudo apt install npm => il install le serveur nodeJs
+node -v
+
+Obtenir la dernier version de node
+-sudo npm install -g n
+-n latest
+
+2- Installer angular (permet d'utiliser les commandes ng)
+npm install -g @angular/cli@latest
+
+3- Création du projet
+ng new projectName --style=scss --skip-tests=true
+
+4- Lancer le serveur nodeJs
+ng serve
+
+5- Création d'un composant
+ng generate component composantName
+
+6- Créer un service
+ng generate service serviceName

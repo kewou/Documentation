@@ -1,0 +1,8 @@
+# Sélectionner un profil dans la configuration
+Dans environnement => Spring.profiles.active=dev
+
+# Formatage
+Ctrl + Alt + L
+
+# Settings
+Ctrl + Alt + S

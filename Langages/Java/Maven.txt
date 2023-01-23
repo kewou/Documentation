@@ -1,0 +1,5 @@
+# Activé un profil
+-Dspring-boot.run.profiles=nomProfil
+
+# Désactivé les test U
+mvn clean install -Dmaven.test.skip=true

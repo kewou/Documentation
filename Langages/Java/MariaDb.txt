@@ -1,0 +1,20 @@
+# Statu du serveur
+sudo systemctl status mariadb
+
+# Version
+mysql -V
+
+# Sécurité ( changement de mot de pass root )
+sudo mysql_secure_installation
+
+# Connection
+mysql -u root -p
+
+#SQL
+- les bases de données => show databases;
+- les tables => show tables;
+- décrire une table => describe nomTable;
+
+# STOP MARIA DB
+systemctl stop mariadb
+service mysql stop
