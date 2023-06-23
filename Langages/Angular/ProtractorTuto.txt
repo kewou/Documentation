@@ -1,0 +1,13 @@
+### Installation de protractor
+sudo npm install -g protractor
+protractor --version
+Il installe protractor et le webdriver-manager, le webderiver manager permet d'obtenir une instance de Sélenium
+webdriver-manager update
+sudo webdriver-manager start ==> demarer le server Selenium
+Le protractor envoi des requetes au server Selenium
+
+
+### Run test
+protractor fichierDeConfigurationProtractor.js
+
+### pour le driver chrome il faut rajouter les options

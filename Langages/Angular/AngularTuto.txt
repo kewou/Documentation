@@ -13,7 +13,8 @@ npm install -g @angular/cli@latest
 ng new projectName --style=scss --skip-tests=true
 
 4- Lancer le serveur nodeJs
-ng serve
+ng serve ( à la raçine du projet Angular)
+http://localhost:4200/ lien vers l'acceuil
 
 5- Création d'un composant
 ng generate component composantName
