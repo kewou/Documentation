@@ -1,0 +1,9 @@
+### Récupération de l'image
+docker pull sonarqube
+
+### Run de l'image
+docker run -d --name sonarqube -p 9001:9000 sonarqube
+
+localhost:9001
+premiere connexion admin admin
+Mis à jour => user=admin pass= delphine12
