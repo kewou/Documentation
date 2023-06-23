@@ -1,0 +1,36 @@
+### Lancer jenkins
+docker run -d --name JENKINS  -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /home/noumia/.docker/www/Jenkins/jenkins_home:/var/jenkins_home jenkins-image
+
+### password admin
+beezyAdmin
+
+# Configuration de jenkins pour un nouveau projet
+Tableau de bord -> Nouveau Item
+                -> Saisir un nom et sélectionner Pipeline Multibranches
+                -> Branch Sources -> Git -> Mettre l'url du repo git
+                -> Il faut faire un premier push afin que le repo distant ai un Jenkinsfile à la raçine du projet
+
+
+# Pour PHP
+Installer PhP -> Se connecter à la machine
+              -> apt-get update
+              -> apt-get install php
+
+# Pour Composer
+    -> curl -sS https://getcomposer.org/installer | php
+    -> mv composer.phar /usr/local/bin/composer
+    -> sudo chmod +x /usr/local/bin/composer
+    -> composer --version
+    -> ajouter un dossier vendor
+        -> dans vendor un nom de notre package ( nomPackage )
+     -> ajouter un composer.json
+        -> "name": "nomPackage/unNom"
+
+# Git
+S'assurer que le plugin Github Plugin est installé est activé
+
+# jdk
+Ajouter le chemin de la JAVA_HOME
+Pour l'optenir => echo $JAVA_HOME
+
+
