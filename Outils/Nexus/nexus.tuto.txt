@@ -1,0 +1,29 @@
+## command docker pour nexus
+Volume Nexus
+mettre les droits : chmod 777 Nexus
+docker run -d -p 8081:8081 -p 8084:8084 -p 8085:8085  --name NEXUS sonatype/nexus3 -v /home/noumia/.docker/www/Nexus:/nexus-data
+
+
+## le mot de pass par defaut
+Your admin user password is located in
+/nexus-data/admin.password on the server.
+il faut allé le prendre sur la machine à partir de vscode ( enlever bash-4.4$ )
+
+## Connexion Docker to Nexus
+https://www.youtube.com/watch?v=dpWxWr90MGI
+
+-- Build Image
+docker build -t 172.17.0.3:8085/beezy_start_up .
+-- Connexion
+docker login 172.17.0.3:8085
+-- Push de l'image
+docker push 172.17.0.3:8085/beezy_start_up
+
+-- Pull de l'image
+docker pull 172.17.0.3:8085/beezy_start_up
+
+
+http://localhost:8081/repository/docker-private/
+
+
+
