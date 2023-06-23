@@ -1,0 +1,2 @@
+### stop mysql ###
+service mysql stop
