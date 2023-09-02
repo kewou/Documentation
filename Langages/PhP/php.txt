@@ -1,0 +1,2 @@
+### lien symbolique vers le répertoire wamp
+ln -s /c/Users/33615/Projets_Dev/Beezy_Start_Up /c/wamp67/www

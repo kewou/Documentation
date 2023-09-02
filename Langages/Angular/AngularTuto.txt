@@ -21,3 +21,26 @@ ng generate component composantName
 
 6- Créer un service
 ng generate service serviceName
+
+7- mettre un composant dans du html
+tu met en balise le nom selector du composant : exemple avec le composant user: <app-user></app-user>
+
+8- Pour les formulaire, ajouter le module FormModule dans app.modules
+
+- j'utilise eléments de la raçine pour faire ma page d'accueil. c'est le app-root
+
+- La commande ng generate module app-routing --flat --module=app dans Angular génère un module de routage pour votre application, appelé AppRoutingModule.
+
+Voyons ce que signifient les différents arguments utilisés :
+
+module app-routing: Spécifie le nom du module que vous souhaitez générer. Dans ce cas, il s'agit de app-routing.
+
+--flat: Indique à la CLI d'ajouter le fichier généré dans le répertoire courant, plutôt que de créer un sous-répertoire séparé pour le module. Cela permet d'avoir une structure plus plate pour vos fichiers.
+
+--module=app: Spécifie le nom du module racine de votre application dans lequel le module de routage doit être importé. Dans ce cas, il s'agit du module principal app.module.ts.
+
+Lorsque vous exécutez cette commande, Angular génère le fichier app-routing.module.ts dans le même répertoire où vous avez exécuté la commande. Ce fichier contient généralement la configuration de routage pour votre application.
+
+Après avoir exécuté cette commande, vous devrez également importer le module AppRoutingModule dans votre module racine (app.module.ts). Vous pouvez le faire en ajoutant import { AppRoutingModule } from './app-routing.module'; dans la liste des importations et en l'ajoutant également dans la section imports du décorateur @NgModule.
+
+Le module de routage généré peut être utilisé pour définir les routes de votre application Angular et gérer la navigation entre les différentes vues de votre application.
